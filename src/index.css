@@ -6,9 +6,9 @@
 
 @layer base {
   * {
-    @apply font-[Ubuntu-Condensed];
-    @apply text-[#ffffff];
-    @apply text-[35px];
+    font-family: Ubuntu-Condensed;
+    color: #f0f0f0;
+    font-size: 35px;
   }
 
   body {
@@ -17,5 +17,22 @@
     @apply items-center;
     @apply h-screen;
     @apply bg-[#fbc77f];
+  }
+}
+
+.flip {
+  animation: 0.5s linear flipping;
+}
+
+@keyframes flipping {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+
+  100% {
+    transform: rotateX(0deg);
   }
 }

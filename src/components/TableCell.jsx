@@ -1,10 +1,12 @@
-import React from "react"
+import TableLetter from "./TableLetter"
 
 const TableCell = ({ word }) => {
+  // const flipping = flip ? "flip" : ""
+
   return (
-    <td className='float-left h-[40px] min-w-[20px] bg-black border-4 border-solid'>
-      {Array.from(word).map((letter, _index) => (
-        <div className=''>{letter}</div>
+    <td>
+      {Array.from(word).map((letter, index) => (
+        <TableLetter key={index} letter={letter} index={index} />
       ))}
     </td>
   )
